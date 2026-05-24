@@ -1,122 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carole Exquis | À vos côtés, chez vous</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="navbar">
-        <div class="nav-container">
-            <img src="img/logo.png" alt="Logo Carole Exquis" class="logo">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#accompagnements">Accompagnements</a></li>
-                    <li><a href="#qui-suis-je">Qui suis-je ?</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="nav-container">
+        <img src="img/logo.png" alt="Logo Carole Exquis" class="logo" />
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#accompagnements">Accompagnements</a></li>
+            <li><a href="#qui-suis-je">Qui suis-je ?</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <section id="accueil" class="hero">
-            <div class="hero-content reveal">
-                <h1>Carole Exquis</h1>
-                <h2>À vos côtés, chez vous !</h2>
-                <p class="subtitle">Double compétence : Auxiliaire de santé CRS & Employée de commerce CFC</p>
-                <a href="#contact" class="btn btn-blue">Discutons de vos besoins</a>
+      <section id="accueil" class="hero bg-deep-blue">
+        <div class="hero-content reveal">
+          <h1 class="text-white large-title">Carole Exquis</h1>
+          <h2 class="text-accent-blue slogan-title">
+            À vos côtés, chez vous !
+          </h2>
+          <a href="#contact" class="btn btn-hero"
+            >Discutons ensemble de vos besoins</a
+          >
+        </div>
+      </section>
+
+      <section
+        id="double-competence"
+        class="competence-section bg-deep-blue text-white"
+      >
+        <div class="container text-center reveal">
+          <h2 class="section-title text-white">Double Compétence</h2>
+          <div class="competence-grid">
+            <div class="competence-item competence-health">
+              <div class="icon-line orange-line"></div>
+              <p>Auxiliaire de santé CRS</p>
             </div>
-        </section>
-
-        <section id="accompagnements" class="services-section">
-            <div class="container">
-                <h2 class="section-title reveal">Mes Accompagnements</h2>
-                <p class="section-intro reveal">Un accompagnement de qualité, humain et sur mesure, axé sur le respect, l'empathie, la bienveillance et la confidentialité.</p>
-                
-                <div class="services-grid">
-                    <div class="service-card card-orange reveal">
-                        <img src="img/soins.jpg" alt="Soins corporels et confort" class="service-img">
-                        <h3>Soins & Confort</h3>
-                        <ul>
-                            <li>Soins corporels</li>
-                            <li>Aide au coucher / lever / habillage</li>
-                            <li>Soutien moral</li>
-                            <li>Présence et écoute attentive</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card card-blue reveal">
-                        <img src="img/domicile.jpg" alt="Aide au domicile et repas" class="service-img">
-                        <h3>Domicile & Repas</h3>
-                        <ul>
-                            <li>Aide aux courses et aux repas</li>
-                            <li>Aide à la mobilité</li>
-                            <li>Transport</li>
-                            <li>Entretien courant du logement</li>
-                        </ul>
-                    </div>
-
-                    <div class="service-card card-green reveal">
-                        <img src="img/administration.jpg" alt="Aide administrative" class="service-img">
-                        <h3>Administration</h3>
-                        <ul>
-                            <li>Démarches administratives</li>
-                            <li>Gestion du budget et des factures</li>
-                            <li>Appui organisationnel</li>
-                            <li>Déclaration d’impôt</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="competence-item competence-commerce">
+              <div class="icon-line green-line"></div>
+              <p>Employée de commerce CFC</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="qui-suis-je" class="about-section">
-            <div class="container about-grid">
-                <div class="about-image reveal">
-                    <img src="img/portrait.jpg" alt="Portrait de Carole Exquis">
-                </div>
-                <div class="about-text reveal">
-                    <h2>Qui suis-je ?</h2>
-                    <p>Forte d'une double compétence unique d'<strong>Auxiliaire de santé CRS</strong> et d'<strong>Employée de commerce CFC</strong>, j'interviens directement à votre domicile pour simplifier votre quotidien et vous apporter sérénité.</p>
-                    <p>Mon approche se veut globale : qu'il s'agisse d'un soutien physique, d'un moment de partage chaleureux ou d'une aide rigoureuse dans vos papiers administratifs, je m'adapte précisément à votre rythme et à vos habitudes.</p>
-                    <div class="values">
-                        <span>Respect</span> • <span>Empathie</span> • <span>Bienveillance</span> • <span>Confidentialité</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="accompagnements" class="services-section bg-light-blue">
+        <div class="container">
+          <h2 class="section-title reveal color-main-blue">
+            Mes Accompagnements
+          </h2>
+          <p class="section-intro reveal color-main-blue">
+            Un accompagnement de qualité, humain et sur mesure, axé sur le
+            respect, l'empathie, la bienveillance et la confidentialité.
+          </p>
 
-        <section id="contact" class="contact-section">
-            <div class="container text-center reveal">
-                <h2>Contact</h2>
-                <p class="secteurs">Secteurs : Entremont - Martigny</p>
-                <p class="contact-intro">Une question ? Un besoin particulier ? N'hésitez pas à me contacter directement par téléphone ou par e-mail.</p>
-                
-                <div class="contact-info">
-                    <a href="tel:0786182643" class="contact-item">
-                        <span class="icon">📞</span>
-                        <strong>078 618 26 43</strong>
-                    </a>
-                    <a href="mailto:carole.exquis@netplus.ch" class="contact-item">
-                        <span class="icon">✉️</span>
-                        <strong>carole.exquis@netplus.ch</strong>
-                    </a>
-                </div>
+          <div class="services-grid">
+            <div class="service-card reveal card-orange">
+              <h3 class="card-title text-orange">SOINS & CONFORT</h3>
+              <p class="card-intro color-main-blue">
+                Améliorer votre qualité de vie tout en respectant vos besoins et
+                vos habitudes.
+              </p>
+              <div class="service-icon-placeholder orange-bg">
+                <img src="img/icon-soins.png" alt="Icône Soins" />
+              </div>
+              <ul>
+                <li>Soins corporels</li>
+                <li>Aide au coucher / lever / habillage</li>
+                <li>Soutien moral</li>
+                <li>Présence et écoute attentive</li>
+              </ul>
             </div>
-        </section>
+
+            <div class="service-card reveal card-blue">
+              <h3 class="card-title color-accent-blue">DOMICILE & REPAS</h3>
+              <p class="card-intro color-main-blue">
+                Simplifier votre quotidien et vous apporter sérénité au
+                quotidien.
+              </p>
+              <div class="service-icon-placeholder blue-bg">
+                <img src="img/icon-domicile.png" alt="Icône Domicile" />
+              </div>
+              <ul>
+                <li>Aide aux courses et aux repas</li>
+                <li>Aide à la mobilité</li>
+                <li>Transport</li>
+                <li>Entretien courant du logement</li>
+              </ul>
+            </div>
+
+            <div class="service-card reveal card-green">
+              <h3 class="card-title text-green">ADMINISTRATION</h3>
+              <p class="card-intro color-main-blue">
+                Forte de mon expérience, je peux vous épauler dans vos
+                différentes démarches.
+              </p>
+              <div class="service-icon-placeholder green-bg">
+                <img src="img/icon-admin.png" alt="Icône Administration" />
+              </div>
+              <ul>
+                <li>Démarches administratives</li>
+                <li>Gestion du budget et des factures</li>
+                <li>Appui organisationnel</li>
+                <li>Déclaration d’impôt</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="qui-suis-je" class="about-section bg-white">
+        <div class="container about-grid">
+          <div class="about-image reveal">
+            <img src="img/portrait.jpg" alt="Portrait de Carole Exquis" />
+          </div>
+          <div class="about-text reveal color-main-blue">
+            <h2>Qui suis-je ?</h2>
+            <p>
+              Forte de ma double compétence, j'interviens directement à votre
+              domicile pour simplifier votre quotidien et vous apporter
+              sérénité.
+            </p>
+            <p>
+              Mon approche se veut globale : qu'il s'agisse d'un soutien
+              physique, d'un moment de partage chaleureux ou d'une aide
+              rigoureuse dans vos papiers administratifs, je m'adapte
+              précisément à votre rythme et à vos habitudes.
+            </p>
+            <div class="values color-accent-blue">
+              <span>Respect</span> • <span>Empathie</span> •
+              <span>Bienveillance</span> • <span>Confidentialité</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section bg-white text-center">
+        <div class="container reveal">
+          <h2 class="section-title color-main-blue">Contact</h2>
+          <h3 class="contact-slogan color-accent-blue">
+            À vos côtés, chez vous !
+          </h3>
+
+          <p class="secteurs text-orange">Secteurs : Entremont - Martigny</p>
+          <p class="contact-intro color-main-blue">
+            Une question ? Un besoin particulier ? N'hésitez pas à me contacter
+            directement par téléphone ou par e-mail.
+          </p>
+
+          <div class="contact-info">
+            <a href="tel:0786182643" class="contact-item">
+              <span class="icon">📞</span>
+              <strong>078 618 26 43</strong>
+            </a>
+            <a href="mailto:carole.exquis@netplus.ch" class="contact-item">
+              <span class="icon">✉️</span>
+              <strong>carole.exquis@netplus.ch</strong>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Carole Exquis. Tous droits réservés.</p>
+    <footer class="bg-deep-blue text-white">
+      <p>&copy; 2026 Carole Exquis. Tous droits réservés.</p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
