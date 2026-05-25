@@ -1,14 +1,20 @@
-/* Variables de couleurs calquées sur le flyer */
+/* =========================================
+   VARIABLES (Couleurs exactes du flyer)
+========================================= */
 :root {
-    --color-main-blue: #1f4172;   /* Bleu profond du flyer */
-    --color-accent-blue: #5285a4; /* Bleu secondaire */
-    --color-orange: #c6914b;      /* Couleur Soins & Confort */
-    --color-green: #6d8c67;       /* Couleur Administration */
-    --color-light-blue-bg: #f2f7fb; /* Fond très clair des services */
+    --color-main-blue: #183e6b;       /* Bleu profond du flyer */
+    --color-flyer-light-blue: #93b9c6; /* Bleu clair du bandeau compétence */
+    --color-accent-blue: #5285a4;     
+    --color-orange: #c6914b;          /* Couleur Soins & Confort */
+    --color-green: #7d9e76;           /* Couleur Administration (ajusté flyer) */
+    --color-light-blue-bg: #f2f7fb;   /* Fond très clair des services */
     --color-text-dark: #2c3e50;
     --font-main: 'Plus Jakarta Sans', sans-serif;
 }
 
+/* =========================================
+   BASE & RESET
+========================================= */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,23 +33,28 @@ body {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* Utilitaires texte/fond */
 .text-center { text-align: center; }
+.text-left { text-align: left; }
 .text-white { color: #fff; }
 .color-main-blue { color: var(--color-main-blue); }
 .color-accent-blue { color: var(--color-accent-blue); }
 .text-orange { color: var(--color-orange); }
 .text-green { color: var(--color-green); }
+.mt-20 { margin-top: 20px; }
 
 .bg-deep-blue { background-color: var(--color-main-blue); }
 .bg-light-blue { background-color: var(--color-light-blue-bg); }
 .bg-white { background-color: #fff; }
 
-/* Navbar */
+/* =========================================
+   NAVBAR
+========================================= */
 .navbar {
     position: fixed;
     top: 0;
@@ -63,8 +74,8 @@ body {
     padding: 10px 20px;
 }
 
-.logo {
-    height: 50px;
+.logo-nav {
+    height: 70px;
     width: auto;
 }
 
@@ -77,67 +88,76 @@ body {
     color: var(--color-main-blue);
     text-decoration: none;
     padding: 10px 15px;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.3s;
+    font-size: 1.5rem;
 }
 
 .nav-links a:hover {
     color: var(--color-orange);
 }
 
-/* Sections globales */
-section {
-    padding: 100px 0;
+/* =========================================
+   HERO (Style Flyer 100% Fidèle)
+========================================= */
+.hero-flyer {
+    background-color: #fff;
+    padding-top: 65px; /* Espace sous la navbar fixe */
+    padding-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
-.section-title {
-    font-size: 2.8rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.section-intro {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 60px;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-/* Hero Section (FOND BLEU) */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 80px; /* offset navbar */
-    text-align: center;
-}
-
-.hero-content {
+.hero-container {
+    position: relative; 
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    min-height: 380px;
+    overflow: hidden;
 }
 
-.large-title {
-    font-size: 5rem;
-    line-height: 1.1;
-    margin-bottom: 10px;
+.hero-blue-shape {
+    background-color: var(--color-main-blue);
+    color: white;
+    width: 100%;
+    text-align: left;
+
+    /* Trapèze : bord droit diagonal
+       Haut plat à 82%, bas plat à 65% 
+       → la diagonale est centrée vers 73.5% */
+    clip-path: polygon(0 0, 82% 0, 65% 100%, 0 100%);
+
+    /* Padding : texte à gauche, dégagement avant la diagonale */
+    padding: 80px 42% 55px 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-blue-shape h1 {
+    font-size: 4.2rem;
     font-weight: 800;
+    margin: 0;
+    line-height: 1.05;
+    letter-spacing: 0px;
 }
 
-.slogan-title {
-    font-size: 2.2rem;
-    margin-bottom: 50px;
+/* Le slogan */
+.hero-blue-shape h2 {
+    font-size: 3rem;
     font-weight: 500;
+    margin: 8px 0 28px;
 }
 
 /* Bouton Hero */
 .btn-hero {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 10px 28px;
     border-radius: 40px;
     text-decoration: none;
     font-weight: 600;
@@ -145,103 +165,107 @@ section {
     background-color: transparent;
     border: 2px solid #fff;
     color: #fff;
+    align-self: flex-start;
+    font-size: 1.5rem;
 }
 
 .btn-hero:hover {
-    background-color: var(--color-orange);
-    border-color: var(--color-orange);
+    background-color: var(--color-flyer-light-blue);
+    border-color: var(--color-flyer-light-blue);
     transform: translateY(-2px);
 }
 
-/* Section Double Compétence (FOND BLEU) */
-.competence-section {
-    padding: 80px 0;
-    border-top: 5px solid transparent; /* Pour les barres colorées en bas si besoin */
-}
-
-.competence-grid {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 50px;
-    flex-wrap: wrap;
-}
-
-.competence-item {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.icon-line {
-    width: 150px;
-    height: 60px;
-    margin-bottom: 15px;
-    border-top: 6px solid;
-    position: relative;
-}
-
-/* Placeholder pour les icônes de la double compétence */
-.icon-line::before {
-    content: "Icon"; /* Placeholder */
+/* Positionnement logo SUR la ligne diagonale
+   clip-path: polygon(0 0, 82% 0, 65% 100%, 0 100%)
+   À mi-hauteur (50%) : X = 65% + (82%-65%) * 0.5 = 73.5% */
+.hero-logo {
     position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.8rem;
-    font-weight: 300;
+    left: 70.5%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    width: 195px;
+    z-index: 5;
+    filter: drop-shadow(2px 4px 12px rgba(0,0,0,0.12));
 }
 
-.orange-line { border-top-color: var(--color-orange); }
-.green-line { border-top-color: var(--color-green); }
+/* =========================================
+   BANDEAU DOUBLE COMPÉTENCE
+========================================= */
+.competence-band {
+    background-color: var(--color-flyer-light-blue);
+    padding: 30px 20px;
+}
 
-/* Section Accompagnements (BLOCS CLAIRS) */
+.comp-title {
+    color: var(--color-main-blue);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.comp-details {
+    color: #fff;
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   SECTIONS GÉNÉRALES
+========================================= */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* =========================================
+   SECTION ACCOMPAGNEMENTS (Services)
+========================================= */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    padding-bottom: 50px;
 }
 
 .service-card {
     background: #fff;
     padding: 40px 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
     border-top: 6px solid transparent;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s;
-    position: relative;
 }
 
 .service-card:hover { transform: translateY(-5px); }
 
-/* Bordures colorées des cartes */
 .card-orange { border-top-color: var(--color-orange); }
 .card-blue { border-top-color: var(--color-main-blue); }
 .card-green { border-top-color: var(--color-green); }
 
-/* Stylisation des titres des cartes comme sur le flyer */
 .card-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.card-intro {
-    font-size: 0.95rem;
+    font-size: 1.5rem;
+    font-weight: 800;
     margin-bottom: 25px;
-    font-weight: 500;
 }
 
-/* Placeholders pour les grandes icônes colorées */
 .service-icon-placeholder {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     margin: 0 auto 30px;
     display: flex;
@@ -251,39 +275,44 @@ section {
 }
 
 .service-icon-placeholder img {
-    max-width: 70%;
+    max-width: 60%;
     height: auto;
 }
 
-.orange-bg { background-color: var(--color-orange); }
-.blue-bg { background-color: var(--color-accent-blue); }
-.green-bg { background-color: var(--color-green); }
+.orange-bg { background-color: rgba(198, 145, 75, 0.15); border: 2px solid var(--color-orange); }
+.blue-bg { background-color: rgba(24, 62, 107, 0.1); border: 2px solid var(--color-main-blue); }
+.green-bg { background-color: rgba(125, 158, 118, 0.15); border: 2px solid var(--color-green); }
 
 .service-card ul {
     list-style: none;
-    margin-top: auto; /* Pousse la liste vers le bas */
+    margin-top: auto;
+    text-align: left;
 }
 
 .service-card ul li {
     margin-bottom: 12px;
     position: relative;
     padding-left: 20px;
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--color-main-blue);
+    font-weight: 500;
 }
 
 .service-card ul li::before {
     content: "•";
     position: absolute;
     left: 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 1;
 }
 
 .card-orange ul li::before { color: var(--color-orange); }
 .card-blue ul li::before { color: var(--color-main-blue); }
 .card-green ul li::before { color: var(--color-green); }
 
-/* Section Qui suis-je ? (Simplifiée) */
+/* =========================================
+   SECTION QUI SUIS-JE
+========================================= */
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -297,51 +326,54 @@ section {
     box-shadow: 0 15px 35px rgba(0,0,0,0.06);
 }
 
-.about-text h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
 .about-text p {
     margin-bottom: 20px;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
 .values {
     margin-top: 30px;
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.15rem;
 }
 
-/* Section Contact (FOND BLANC COLORÉ) */
+/* =========================================
+   SECTION CONTACT
+========================================= */
 .contact-section {
-    padding-top: 80px;
+    /* On remet un padding en haut et en bas pour que la section respire avec son nouveau fond */
+    padding: 30px 0 50px 0; 
 }
 
 .contact-slogan {
     font-size: 2rem;
-    margin-bottom: 50px;
-    font-weight: 500;
+    font-weight: 600;
+    margin-bottom: 40px;
+    
+    /* Le nouveau design du slogan */
+    background-color: var(--color-main-blue); /* Fond bleu foncé #183e6b */
+    color: #fff; /* Texte en blanc pour la lisibilité */
+    padding: 15px 40px; /* Marges internes */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Petite ombre légère */
 }
 
 .secteurs {
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 700;
+    font-size: 1.3rem;
     margin-bottom: 15px;
 }
 
 .contact-intro {
     max-width: 600px;
-    margin: 0 auto 40px;
+    margin: 0 auto 30px;
 }
 
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .contact-item {
@@ -350,27 +382,32 @@ section {
     gap: 15px;
     text-decoration: none;
     color: var(--color-main-blue);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
     padding: 15px 30px;
     border-radius: 50px;
-    background: var(--color-light-blue-bg);
-    transition: background 0.3s, transform 0.3s;
+    
+    /* On passe les boutons en blanc pour qu'ils contrastent avec le fond de la section */
+    background: #fff; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Légère ombre pour les détacher */
+    transition: background 0.3s, transform 0.3s, color 0.3s;
 }
 
 .contact-item:hover {
     background: var(--color-main-blue);
     color: #fff;
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
-/* Animations de Scroll (Masqué par défaut) */
+/* =========================================
+   ANIMATIONS & FOOTER
+========================================= */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Classe active déclenchée par JS */
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
@@ -379,21 +416,53 @@ section {
 footer {
     text-align: center;
     padding: 30px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .large-title { font-size: 4rem; }
-    .slogan-title { font-size: 1.8rem; }
+/* =========================================
+   RESPONSIVE (Téléphones & Tablettes)
+========================================= */
+@media (max-width: 1024px) {
+    .hero-blue-shape h1 { font-size: 3.2rem; }
+    .hero-blue-shape h2 { font-size: 1.8rem; }
+    .hero-logo { width: 170px; }
+    .hero-blue-shape { padding: 50px 40% 50px 40px; }
+    .comp-details { font-size: 2.1rem; }
 }
 
 @media (max-width: 768px) {
-    .large-title { font-size: 3rem; }
-    .slogan-title { font-size: 1.5rem; }
-    .hero-content { padding: 10px; }
+    .hero-flyer {
+        padding-top: 65px;
+    }
+    .hero-container {
+        flex-direction: column;
+        padding: 90px 0px 0px 0px;
+    }
+    .hero-blue-shape {
+        width: 100%;
+        clip-path: none;
+        padding: 35px 20px 70px 20px;
+        text-align: center;
+        align-items: center;
+    }
+    .hero-blue-shape h1 { font-size: 2.8rem; }
+    .hero-blue-shape h2 { font-size: 1.6rem; }
+    .btn-hero {
+        align-self: center;
+    }
+    .hero-logo {
+        position: relative; 
+        top: auto;
+        transform: none;
+        width: 140px;
+        margin-top: -50px;
+    }
+    .comp-title { font-size: 1.6rem; }
+    .comp-details { font-size: 1.7rem; }
+    
     .about-grid { grid-template-columns: 1fr; gap: 30px; }
-    .navbar { padding: 10px 0; }
     .nav-container { flex-direction: column; gap: 10px; }
     .contact-info { flex-direction: column; gap: 15px; align-items: center; }
+    .contact-slogan { font-size: 1.4rem; padding: 12px 25px; }
+    .nav-links a { font-size: 1.0rem; }
 }

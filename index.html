@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <header class="navbar">
       <div class="nav-container">
-        <img src="img/logo.png" alt="Logo Carole Exquis" class="logo" />
+        <img src="img/logo.png" alt="Logo Carole Exquis" class="logo-nav" />
         <nav>
           <ul class="nav-links">
             <li><a href="#accueil">Accueil</a></li>
@@ -28,54 +28,48 @@
     </header>
 
     <main>
-      <section id="accueil" class="hero bg-deep-blue">
-        <div class="hero-content reveal">
-          <h1 class="text-white large-title">Carole Exquis</h1>
-          <h2 class="text-accent-blue slogan-title">
-            À vos côtés, chez vous !
-          </h2>
-          <a href="#contact" class="btn btn-hero"
-            >Discutons ensemble de vos besoins</a
-          >
+      <section id="accueil" class="hero-flyer">
+        <div class="hero-container">
+          <div class="hero-blue-shape reveal">
+            <h1>CAROLE EXQUIS</h1>
+            <h2>À vos côtés, chez vous !</h2>
+            <a href="#contact" class="btn btn-hero mt-20"
+              >Discutons ensemble de vos besoins</a
+            >
+          </div>
+          <img
+            src="img/logo.png"
+            alt="Logo Carole Exquis"
+            class="hero-logo reveal"
+          />
         </div>
       </section>
 
-      <section
-        id="double-competence"
-        class="competence-section bg-deep-blue text-white"
-      >
-        <div class="container text-center reveal">
-          <h2 class="section-title text-white">Double Compétence</h2>
-          <div class="competence-grid">
-            <div class="competence-item competence-health">
-              <div class="icon-line orange-line"></div>
-              <p>Auxiliaire de santé CRS</p>
-            </div>
-            <div class="competence-item competence-commerce">
-              <div class="icon-line green-line"></div>
-              <p>Employée de commerce CFC</p>
-            </div>
-          </div>
+      <section id="double-competence" class="competence-band reveal">
+        <div class="container text-center">
+          <h3 class="comp-title">Double compétence</h3>
+          <p class="comp-details">
+            AUXILIAIRE DE SANTÉ CRS<br />
+            EMPLOYÉE DE COMMERCE CFC
+          </p>
         </div>
       </section>
 
       <section id="accompagnements" class="services-section bg-light-blue">
         <div class="container">
-          <h2 class="section-title reveal color-main-blue">
+          <h2 class="section-title reveal color-main-blue text-center">
             Mes Accompagnements
           </h2>
-          <p class="section-intro reveal color-main-blue">
+          <p class="section-intro reveal color-main-blue text-center">
             Un accompagnement de qualité, humain et sur mesure, axé sur le
             respect, l'empathie, la bienveillance et la confidentialité.
           </p>
 
           <div class="services-grid">
             <div class="service-card reveal card-orange">
-              <h3 class="card-title text-orange">SOINS & CONFORT</h3>
-              <p class="card-intro color-main-blue">
-                Améliorer votre qualité de vie tout en respectant vos besoins et
-                vos habitudes.
-              </p>
+              <h3 class="card-title text-orange text-center">
+                SOINS & CONFORT
+              </h3>
               <div class="service-icon-placeholder orange-bg">
                 <img src="img/icon-soins.png" alt="Icône Soins" />
               </div>
@@ -88,11 +82,9 @@
             </div>
 
             <div class="service-card reveal card-blue">
-              <h3 class="card-title color-accent-blue">DOMICILE & REPAS</h3>
-              <p class="card-intro color-main-blue">
-                Simplifier votre quotidien et vous apporter sérénité au
-                quotidien.
-              </p>
+              <h3 class="card-title color-main-blue text-center">
+                DOMICILE & REPAS
+              </h3>
               <div class="service-icon-placeholder blue-bg">
                 <img src="img/icon-domicile.png" alt="Icône Domicile" />
               </div>
@@ -105,11 +97,7 @@
             </div>
 
             <div class="service-card reveal card-green">
-              <h3 class="card-title text-green">ADMINISTRATION</h3>
-              <p class="card-intro color-main-blue">
-                Forte de mon expérience, je peux vous épauler dans vos
-                différentes démarches.
-              </p>
+              <h3 class="card-title text-green text-center">ADMINISTRATION</h3>
               <div class="service-icon-placeholder green-bg">
                 <img src="img/icon-admin.png" alt="Icône Administration" />
               </div>
@@ -117,7 +105,7 @@
                 <li>Démarches administratives</li>
                 <li>Gestion du budget et des factures</li>
                 <li>Appui organisationnel</li>
-                <li>Déclaration d’impôt</li>
+                <li>Déclaration d'impôt</li>
               </ul>
             </div>
           </div>
@@ -130,7 +118,7 @@
             <img src="img/portrait.jpg" alt="Portrait de Carole Exquis" />
           </div>
           <div class="about-text reveal color-main-blue">
-            <h2>Qui suis-je ?</h2>
+            <h2 class="section-title">Qui suis-je ?</h2>
             <p>
               Forte de ma double compétence, j'interviens directement à votre
               domicile pour simplifier votre quotidien et vous apporter
@@ -150,12 +138,11 @@
         </div>
       </section>
 
-      <section id="contact" class="contact-section bg-white text-center">
+      <section id="contact" class="contact-section bg-light-blue text-center">
         <div class="container reveal">
           <h2 class="section-title color-main-blue">Contact</h2>
-          <h3 class="contact-slogan color-accent-blue">
-            À vos côtés, chez vous !
-          </h3>
+
+          <h3 class="contact-slogan">Discutons ensemble de vos besoins !</h3>
 
           <p class="secteurs text-orange">Secteurs : Entremont - Martigny</p>
           <p class="contact-intro color-main-blue">
