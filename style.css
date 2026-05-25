@@ -91,6 +91,7 @@ body {
     font-weight: 600;
     transition: color 0.3s;
     font-size: 1.5rem;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -334,7 +335,8 @@ section {
 .values {
     margin-top: 30px;
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
+    text-align: center;
 }
 
 /* =========================================
@@ -431,7 +433,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-links a { font-size: 0.7rem; }
+    .nav-links a { font-size: 0.8rem; }
     .hero-flyer {
         padding-top: 65px;
     }
