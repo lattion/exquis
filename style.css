@@ -162,9 +162,9 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: transform 0.3s, background-color 0.3s;
-    background-color: transparent;
+    background-color: white;
     border: 2px solid #fff;
-    color: #fff;
+    color: #183e6b;
     align-self: flex-start;
     font-size: 1.5rem;
 }
@@ -431,17 +431,18 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .nav-links a { font-size: 0.6rem; }
     .hero-flyer {
         padding-top: 65px;
     }
     .hero-container {
         flex-direction: column;
-        padding: 90px 0px 0px 0px;
+        padding: 60px 0px 0px 0px;
     }
     .hero-blue-shape {
         width: 100%;
         clip-path: none;
-        padding: 35px 20px 70px 20px;
+        padding: 65px 20px 70px 20px;
         text-align: center;
         align-items: center;
     }
@@ -450,19 +451,30 @@ footer {
     .btn-hero {
         align-self: center;
     }
-    .hero-logo {
-        position: relative; 
+   .hero-logo {
+        /* On supprime les règles de positionnement du mode ordinateur */
+        position: static; /* Se comporte comme un élément normal */
         top: auto;
+        right: auto;
         transform: none;
-        width: 140px;
-        margin-top: -50px;
+        margin: -50px auto auto;
+        
+        /* TAILLE DU LOGO SUR MOBILE */
+        width: 150px; 
+        height: auto;
+        
+        display: block;
     }
+
+     .section-title { font-size: 1.8rem; }
+
+    .section-intro {font-size: 1.3rem; text-align: justify;}
     .comp-title { font-size: 1.6rem; }
-    .comp-details { font-size: 1.7rem; }
+    .comp-details { font-size: 1.3rem; }
     
     .about-grid { grid-template-columns: 1fr; gap: 30px; }
     .nav-container { flex-direction: column; gap: 10px; }
     .contact-info { flex-direction: column; gap: 15px; align-items: center; }
     .contact-slogan { font-size: 1.4rem; padding: 12px 25px; }
-    .nav-links a { font-size: 1.0rem; }
+    
 }
