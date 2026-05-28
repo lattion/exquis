@@ -168,12 +168,14 @@ body {
     color: #183e6b;
     align-self: flex-start;
     font-size: 1.5rem;
+	box-shadow: 2px 2px 1px #93b9c6;
 }
 
 .btn-hero:hover {
     background-color: var(--color-flyer-light-blue);
     border-color: var(--color-flyer-light-blue);
     transform: translateY(-2px);
+	box-shadow: none;
 }
 
 /* Positionnement logo SUR la ligne diagonale
