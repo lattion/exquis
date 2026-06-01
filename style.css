@@ -6,7 +6,7 @@
     --color-flyer-light-blue: #93b9c6; /* Bleu clair du bandeau compétence */
     --color-accent-blue: #5285a4;     
     --color-orange: #c6914b;          /* Couleur Soins & Confort */
-    --color-green: #7d9e76;           /* Couleur Administration (ajusté flyer) */
+    --color-green: #9dae8b;           /* Couleur Administration (ajusté flyer) */
     --color-light-blue-bg: #f2f7fb;   /* Fond très clair des services */
     --color-text-dark: #2c3e50;
     --font-main: 'Plus Jakarta Sans', sans-serif;
@@ -218,18 +218,18 @@ body {
    SECTIONS GÉNÉRALES
 ========================================= */
 section {
-    padding: 30px 0;
+    padding: 10px 0;
 }
 
 .section-title {
     font-size: 2.5rem;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 20px;
 }
 
 .section-intro {
     max-width: 800px;
-    margin: 0 auto auto;
+    margin: 20px auto auto;
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -327,9 +327,37 @@ section {
     line-height: 1;
 }
 
+.service-section {
+    padding: 30px 0 50px 0;
+}
+
 .card-orange ul li::before { color: var(--color-orange); }
 .card-blue ul li::before { color: var(--color-main-blue); }
 .card-green ul li::before { color: var(--color-green); }
+
+.btn-service {
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s, background-color 0.3s;
+    background-color: var(--color-main-blue);
+    border: 2px solid var(--color-flyer-light-blue);
+    color: white;
+    margin: 50px auto; 
+    display: block; 
+    width: fit-content;
+    font-size: 1.5rem;
+	box-shadow: 2px 2px 1px var(--color-flyer-light-blue);
+}
+
+.btn-service:hover {
+    background-color: var(--color-flyer-light-blue);
+    border-color: var(--color-flyer-light-blue);
+    transform: translateY(-2px);
+	box-shadow: none;
+}
 
 /* =========================================
    SECTION QUI SUIS-JE
@@ -339,6 +367,12 @@ section {
     grid-template-columns: 1fr 1.2fr;
     gap: 50px;
     align-items: center;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 
 .about-image img {
@@ -409,9 +443,35 @@ section {
 }
 
 .contact-item:hover {
-    background: var(--color-main-blue);
     color: #fff;
     transform: scale(1.05);
+}
+
+.contact-image {
+    width: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+/* Carte de visite — centrée, taille contrôlée et ombre fidèle à .about-image */
+.contact-card {
+    padding: 0; /* supprimer le 'bouton' blanc */
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+.contact-card:hover {
+    transform: none;
+    
+}
+.business-card {
+    display: block;
+    max-width: 600px; /* pas trop grande */
+    width: 100%;
+    height: auto;
+    margin: 0 auto; /* centrer */
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06); /* même ombre que .about-image img */
 }
 
 /* =========================================
@@ -503,4 +563,8 @@ footer {
     .contact-info { flex-direction: column; gap: 15px; align-items: center; }
     .contact-slogan { font-size: 1.4rem; padding: 12px 25px; }
     
+}
+
+@media (max-width: 768px) {
+    .business-card { max-width: 260px; }
 }
