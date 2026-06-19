@@ -334,7 +334,8 @@ section {
 .service-title {
     font-size: 2.5rem;
     font-weight: 800;
-    margin : -60px 0 20px 0px
+    margin : -60px 0 20px 0px;
+    text-align: center;
 }
 .card-orange ul li::before { color: var(--color-orange); }
 .card-blue ul li::before { color: var(--color-main-blue); }
@@ -550,7 +551,7 @@ footer {
         display: block;
     }
 
-    .section-title { font-size: 1.8rem; }
+    .section-title { font-size: 1.8rem; text-align: center;}
 
     .section-intro {font-size: 1.3rem; text-align: center;}
 
