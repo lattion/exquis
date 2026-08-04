@@ -397,6 +397,55 @@ section {
 }
 
 /* =========================================
+   SECTION FORMATIONS
+========================================= */
+.formations-section {
+    padding: 0 0 70px 0;
+}
+
+.formations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.formation-bloc {
+    background: var(--color-light-blue-bg);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.formation-bloc p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Style des listes de dates */
+.formation-dates {
+    list-style: none;
+    padding-left: 0;
+}
+
+.formation-dates li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+    font-size: 1.05rem;
+}
+
+/* Les petits points devant les dates */
+.formation-dates li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: -10px;
+    color: var(--color-orange);
+    font-size: 1.5rem;
+}
+
+/* =========================================
    SECTION CONTACT
 ========================================= */
 .contact-section {
@@ -537,8 +586,7 @@ footer {
         align-self: center;
     }
    .hero-logo {
-        /* On supprime les règles de positionnement du mode ordinateur */
-        position: static; /* Se comporte comme un élément normal */
+        position: static; 
         top: auto;
         right: auto;
         transform: none;
@@ -569,6 +617,9 @@ footer {
     .comp-details { font-size: 1.2rem; }
     
     .about-grid { grid-template-columns: 1fr; gap: 30px; }
+    .formations-grid {
+        grid-template-columns: 1fr; 
+        gap: 30px;   }
     .nav-container { flex-direction: column; gap: 10px; }
     .contact-info { flex-direction: column; gap: 15px; align-items: center; }
     .contact-slogan { font-size: 1.4rem; padding: 12px 25px; }
