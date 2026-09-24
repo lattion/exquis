@@ -565,14 +565,44 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .nav-links a { font-size: 0.8rem; }
-    .hero-flyer {
-        padding-top: 65px;
+   .nav-container { 
+        flex-direction: column; 
+        padding: 8px 5px; 
+        width: 100%;
     }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        gap: 2px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links a { 
+        font-size: 0.7rem;
+        padding: 4px 8px;
+        white-space: nowrap;
+    }}
+
+    /* =======================================
+       HERO SECTION & LOGO
+    ======================================= */
+    .hero-flyer {
+        padding-top: 100px;
+    }
+
     .hero-container {
         flex-direction: column;
         padding: 60px 0px 50px 0px;
     }
+
     .hero-blue-shape {
         width: 100%;
         clip-path: none;
@@ -580,50 +610,81 @@ footer {
         text-align: center;
         align-items: center;
     }
+
     .hero-blue-shape h1 { font-size: 2.8rem; }
     .hero-blue-shape h2 { font-size: 1.6rem; }
+    
     .btn-hero {
         align-self: center;
     }
-   .hero-logo {
+
+    .hero-logo {
         position: static; 
         top: auto;
         right: auto;
         transform: none;
         margin: -80px auto auto;
-        
-        /* TAILLE DU LOGO SUR MOBILE */
         width: 150px; 
         height: auto;
-        
         display: block;
     }
 
-    .section-title { font-size: 1.8rem; text-align: center;}
+    /* =======================================
+       SECTIONS GLOBALES
+    ======================================= */
+    .section-title { 
+        font-size: 1.8rem; 
+        text-align: center;
+    }
 
-    .section-intro {font-size: 1.3rem; text-align: center;}
+    .section-intro {
+        font-size: 1.3rem; 
+        text-align: center;
+    }
 
     .section-points {
         font-size: 1.4rem;
-        padding-bottom: 130px;
         gap: 0.5rem 1rem;
         padding-bottom: 20px;
     }
+
+    /* =======================================
+       COMPÉTENCES & SERVICES
+    ======================================= */
+    .comp-title { font-size: 1.6rem; }
+    .comp-details { font-size: 1.2rem; }
+    
     .service-card {
         padding: 30px 20px 40px;
         margin: 120px 0 0px 0;
     }
-    .comp-title { font-size: 1.6rem; }
-    .comp-details { font-size: 1.2rem; }
+
+    /* =======================================
+       GRILLES (Qui suis-je & Formations)
+    ======================================= */
+    .about-grid { 
+        grid-template-columns: 1fr; 
+        gap: 30px; 
+    }
     
-    .about-grid { grid-template-columns: 1fr; gap: 30px; }
     .formations-grid {
         grid-template-columns: 1fr; 
-        gap: 30px;   }
-    .nav-container { flex-direction: column; gap: 10px; }
-    .contact-info { flex-direction: column; gap: 15px; align-items: center; }
-    .contact-slogan { font-size: 1.4rem; padding: 12px 25px; }
+        gap: 30px;   
+    }
+
+    /* =======================================
+       CONTACT
+    ======================================= */
+    .contact-info { 
+        flex-direction: column; 
+        gap: 15px; 
+        align-items: center; 
+    }
     
+    .contact-slogan { 
+        font-size: 1.4rem; 
+        padding: 12px 25px; 
+    }
 }
 
 @media (max-width: 768px) {
